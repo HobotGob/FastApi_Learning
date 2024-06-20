@@ -15,7 +15,8 @@ def home():
 @app.get("/blog/all",
          tags=["blog"],
          summary="Retrieve all blogs",
-         description="This api allows you to retrieve all blogs. "
+         description="This api allows you to retrieve all blogs. ",
+         response_description = "This list of available blogs"
          )
 def get_all_blogs(page = 1, page_size: Optional[int] = None):
     return {"message": f"All {page_size} blogs on page {page}"}
